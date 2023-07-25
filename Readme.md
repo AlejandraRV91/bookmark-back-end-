@@ -22,3 +22,27 @@ Be careful not to share this file with sensitive information in public repositor
 ## Execution Instructions
 
 Once you have completed the setup steps above, you can run the application with:
+
+1. Set up the database schema by executing the following command in your terminal:
+
+```bash
+psql -U postgres -f db/schema.sql
+```
+
+2. Populate the database with seed data by executing the following command in your terminal:
+
+```bash
+psql -U postgres -f db/seed.sql
+```
+
+3. Finally, start the application by running:
+
+```bash
+npm start
+```
+
+Ensure that PostgreSQL is installed and properly configured on your system for the database commands to work.
+
+Now you should have your application up and running!
+
+For any issues or questions, feel free to reach out for support.
