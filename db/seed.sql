@@ -1,4 +1,4 @@
-\ c bookmarks_dev;
+\c bookmarks_dev;
 
 INSERT INTO
     bookmarks (name, url, category, is_favorite)
