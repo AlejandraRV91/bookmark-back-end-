@@ -26,13 +26,13 @@ Once you have completed the setup steps above, you can run the application with:
 1. Set up the database schema by executing the following command in your terminal:
 
 ```bash
-psql -U postgres -f db/schema.sql
+psql -f db/schema.sql
 ```
 
 2. Populate the database with seed data by executing the following command in your terminal:
 
 ```bash
-psql -U postgres -f db/seed.sql
+psql -f db/seed.sql
 ```
 
 3. Finally, start the application by running:
