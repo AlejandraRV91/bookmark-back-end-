@@ -1,3 +1,5 @@
+/** @format */
+
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
@@ -11,7 +13,7 @@ app.use(express.json());
 
 // ROUTES
 app.get("/", (req, res) => {
-    res.send("Welcome to Bookmarks App");
+	res.send("Welcome to Bookmarks App");
 });
 
 // Bookmarks ROUTES
@@ -20,7 +22,7 @@ app.use("/bookmarks", bookmarksController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
-    res.status(404).send("Page not found");
+	res.status(404).send("Page not found");
 });
 
 // EXPORT
