@@ -18,8 +18,6 @@ const {
 	checkContent,
 } = require("../validations/checkReviews");
 
-const { validateURL } = require("../validations/checkBookmarks.js");
-
 reviews.get("/", async (req, res) => {
 	const { bookmarkId } = req.params;
 	try {
@@ -50,7 +48,6 @@ reviews.post(
 	checkRating,
 	checkTitle,
 	checkContent,
-	validateURL,
 	async (req, res) => {
 		const { bookmarkId } = req.params;
 		try {
@@ -85,11 +82,10 @@ reviews.put(
 	checkRating,
 	checkTitle,
 	checkContent,
-	validateURL,
 	async (req, res) => {
-		const { id } = req.params;
+		const { bookmarkId, id } = req.params;
 		try {
-			const existingReview = await getReview(id);
+			const existingReview = await getReview(id, bookmarkId);
 			if (!existingReview) {
 				return res.status(404).json({ error: "Review not found" });
 			}

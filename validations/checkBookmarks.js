@@ -9,7 +9,10 @@ const checkName = (req, res, next) => {
 };
 
 const checkBoolean = (req, res, next) => {
-	if (req.body.is_favorite) {
+	if (
+		req.body.hasOwnProperty("is_favorite") &&
+		typeof req.body.is_favorite === "boolean"
+	) {
 		next();
 	} else {
 		res.status(400).json({ error: "is_favorite must be a boolean value" });

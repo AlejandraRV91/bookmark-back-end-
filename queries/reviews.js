@@ -19,6 +19,7 @@ const getReview = async (id, bookmark_id) => {
 			"SELECT * FROM reviews WHERE id=$1 AND bookmark_id=$2",
 			[id, bookmark_id]
 		);
+		console.log(review)
 		return review;
 	} catch (err) {
 		return err;
